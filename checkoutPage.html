@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styleSheet.css" />
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav><a href="homePage.html">← Return to Store</a></nav>
+    </header>
+
+    <main>
+        <form id="checkout-form">
+            <label>Name: <input type="text" name="name" required /></label><br />
+            <label>Email: <input type="email" name="email" required /></label><br />
+            <label>Address: <textarea name="address" required></textarea></label><br />
+            <button type="submit">Confirm Order</button>
+        </form>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const BACKEND_URL = "https://bookcentral-backend.onrender.com";
+            const form = document.getElementById("checkout-form");
+
+            if (!form) return;
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                if (cart.length === 0) {
+                    alert("Your cart is empty.");
+                    return;
+                }
+
+                const formData = {
+                    name: form.querySelector("input[name='name']").value,
+                    email: form.querySelector("input[name='email']").value,
+                    address: form.querySelector("textarea[name='address']").value,
+                    cartItems: cart
+                };
+
+                fetch(`${BACKEND_URL}/api/sale`, {
+                    mehtod: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        alert("Order confirmed! " + (data.message || ""));
+                        localStorage.removeItem("cart");
+                        window.location.href = "homePage.html";
+                    })
+                    .catch(err => {
+                        console.error("Checkout Failed: ", err);
+                        alert("Something went wrong during checkout.");
+                    });
+            });
+        });
+    </script>
+
+</body>
+</html>
