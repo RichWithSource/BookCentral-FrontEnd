@@ -174,7 +174,7 @@ button#addCartButton {
     border-color: var(--bg);
     text-align: center;
     font-family:'Times New Roman', Times, serif;
-    
+    cursor: pointer;
 }
 
 .product-card {

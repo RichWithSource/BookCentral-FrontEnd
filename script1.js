@@ -23,7 +23,7 @@ function addToCart(id) {
             }
 
             localStorage.setItem("cart", JSON.stringify(cart));
-            alert(`${product} added to cart`);
+            alert(`${product.name} added to cart`);
         })
         .catch(err => {
             console.error("Error adding to cart:", err);
