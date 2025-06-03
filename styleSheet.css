@@ -193,6 +193,7 @@ button#addCartButton {
 .checkout-form {
     font-family: "CustomFont2", 'Times New Roman', Times, serif;
     background-color: var(--bg);
+    color: var(--bg);
 }
 
 footer {
