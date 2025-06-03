@@ -103,7 +103,7 @@ button#confirmOrderButton {
     cursor: pointer;
     border-radius: 25px;
     border-color: var(--card-bg);
-    background: var(--bg);
+    background: var(--card-bg);
     text-align: center;
     color: var(--text);
     font-family:'Times New Roman', Times, serif;
