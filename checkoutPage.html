@@ -8,7 +8,7 @@
 <body>
     <header>
         <h1>Checkout</h1>
-        <nav><a href="homePage.html">← Return to Store</a></nav>
+        <nav><a href="index.html">← Return to Store</a></nav>
     </header>
 
     <main>
@@ -52,7 +52,7 @@
                     .then(data => {
                         alert("Order confirmed! " + (data.message || ""));
                         localStorage.removeItem("cart");
-                        window.location.href = "homePage.html";
+                        window.location.href = "index.html";
                     })
                     .catch(err => {
                         console.error("Checkout Failed: ", err);
