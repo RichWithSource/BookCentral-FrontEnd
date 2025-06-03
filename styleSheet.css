@@ -82,6 +82,9 @@ button#checkoutButton {
     border-color: var(--card-bg);
     background: var(--bg);
     text-align: center;
+    color: var(--text);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
 }
 
 
@@ -91,6 +94,9 @@ button#clearCartButton {
     border-color: var(--card-bg);
     background: var(--bg);
     text-align: center;
+    color: var(--text);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
 }
 .theme-toggle-wrapper {
     position: fixed;
