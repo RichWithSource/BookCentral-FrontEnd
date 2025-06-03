@@ -168,6 +168,15 @@ main {
     gap: 1em;
 }
 
+button#addCartButton {
+    border-radius: 15px;
+    background-color: var(--bg);
+    border-color: var(--bg);
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
 .product-card {
     background-color: var(--card-bg);
     padding: 1em;
