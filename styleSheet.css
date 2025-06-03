@@ -175,6 +175,7 @@ button#addCartButton {
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     cursor: pointer;
+    color: var(--texr);
 }
 
 .product-card {
@@ -193,9 +194,13 @@ button#addCartButton {
 .checkout-form {
     font-family: "CustomFont2", 'Times New Roman', Times, serif;
     background-color: var(--bg);
-    color: var(--bg);
 }
 
+.nav-menu3 a {
+    color: var(--text);
+    font-size: 35px;
+    text-decoration: none;
+}
 footer {
     text-align: center;
     padding: 1em;
