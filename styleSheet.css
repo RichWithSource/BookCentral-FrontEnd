@@ -70,6 +70,17 @@ header {
     text-decoration: none;
 }
 
+.nav-menu3 a {
+    color: var(--text);
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.nav-menu4 a {
+    color: var(--text);
+    font-size: 35px;
+    text-decoration: none;
+}
 /*
 button#themeToggle {
     padding: 0.5em 1em;
@@ -196,11 +207,6 @@ button#addCartButton {
     background-color: var(--bg);
 }
 
-.nav-menu3 a {
-    color: var(--text);
-    font-size: 35px;
-    text-decoration: none;
-}
 footer {
     text-align: center;
     padding: 1em;
