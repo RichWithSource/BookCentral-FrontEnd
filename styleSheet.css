@@ -190,6 +190,11 @@ button#addCartButton {
     border-radius: 5px;
 }
 
+.checkout-form {
+    font-family: "CustomFont2", 'Times New Roman', Times, serif;
+    background-color: var(--bg);
+}
+
 footer {
     text-align: center;
     padding: 1em;
