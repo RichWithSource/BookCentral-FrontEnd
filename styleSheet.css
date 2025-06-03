@@ -218,6 +218,11 @@ button#addCartButton {
     background-color: var(--bg);
 }
 
+.checkout-form input {
+    font-family: "CustomFont2", 'Times New Roman', Times, serif;
+    color: var(--text);
+}
+
 footer {
     text-align: center;
     padding: 1em;
