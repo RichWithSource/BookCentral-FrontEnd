@@ -33,7 +33,7 @@
         const BACKEND_URL = "https://bookcentral-backend.onrender.com";
         const cartContainer = document.getElementById("cart-container");
 
-        fetch(`${BACKEND_URL}/api/products`)
+        fetch(`${BACKEND_URL}/api/products4`)
             .then(res => res.json())
             .then(products => showCart(products));
 

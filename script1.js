@@ -1,7 +1,7 @@
 function addToCart(id) {
     const BACKEND_URL = "https://bookcentral-backend.onrender.com";
 
-    fetch(`${BACKEND_URL}/api/products`)
+    fetch(`${BACKEND_URL}/api/products4`)
         .then(res => res.json())
         .then(products => {
             const product = products.find(p => p.id === id);
@@ -34,7 +34,7 @@ function addToCart(id) {
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("product-container");
 
-    fetch("https://bookcentral-backend.onrender.com/api/products")
+    fetch("https://bookcentral-backend.onrender.com/api/products4")
         .then(res => res.json())
         .then(products => {
             renderProducts(products);
