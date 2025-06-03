@@ -3,8 +3,8 @@ function addToCart(id) {
 
     fetch(`${BACKEND_URL}/api/products4`)
         .then(res => res.json())
-        .then(products => {
-            const product = products.find(p => p.id === id);
+        .then(products4 => {
+            const product = products4.find(p => p.id === id);
             if (!product) return alert("Product not found");
 
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -36,16 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch("https://bookcentral-backend.onrender.com/api/products4")
         .then(res => res.json())
-        .then(products => {
-            renderProducts(products);
-            setupCategoryFiltering(products);
+        .then(products4 => {
+            renderproducts4(products4);
+            setupCategoryFiltering(products4);
         })
         .catch(error => {
-            console.error("Failed to load products:", error);
+            console.error("Failed to load products4:", error);
             container.innerHTML = "<p>Could not load product data.</p>";
         });
 
-    function renderProducts(productList) {
+    function renderproducts4(productList) {
         container.innerHTML = "";
         productList.forEach(product => {
             const card = document.createElement("div");
@@ -60,13 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
             container.appendChild(card);
         });
     }
-    function setupCategoryFiltering(products) {
+    function setupCategoryFiltering(products4) {
         document.querySelectorAll(".nav-menu a[data-catergory]").forEach(link => {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
                 const category = e.target.dataset.category;
-                const filtered = products.filter(p => p.category === category);
-                renderProducts(filtered);
+                const filtered = products4.filter(p => p.category === category);
+                renderproducts4(filtered);
             });
         });
     }
