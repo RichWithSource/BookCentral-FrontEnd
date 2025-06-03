@@ -1,5 +1,5 @@
 function addToCart(id) {
-    const BACKEND_URL = "https://itca-example-advanced-website-backend.onrender.com";
+    const BACKEND_URL = "https://bookcentral-backend.onrender.com";
 
     fetch(`${BACKEND_URL}/api/products`)
         .then(res => res.json())
@@ -60,7 +60,41 @@ document.addEventListener("DOMContentLoaded", function () {
             container.appendChild(card);
         });
     }
+/*
+    function initTheme(){
+        const toggle = document.getElementById('theme-toggle');
 
+        function applyTheme(theme){
+            document.body.classList.remove('light-theme', 'dark-theme');
+            document.body.classList.add(`${theme}-theme`);
+            localStorage.setItem('theme', theme);
+            if(toggle) toggle.checked = theme === 'dark';
+
+            const videoLight = document.getElementById('bg-video-light');
+            const videoDark = document.getElementById('bg-video-dark');
+
+            if(videoLight && videoDark) {
+                if(theme === 'dark') {
+                    videoLight.classList.add('hidden');
+                    videoDark.classList.remove('hidden');
+                }
+                else {
+                    videoDark.classList.add('hidden');
+                    videoLight.classList.remove('hidden');
+                }
+            }
+        }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    if(toggle) {
+        toggle.addEventListener('change', () => {
+            applyTheme(toggle.checked ? 'dark' : 'light');
+        });
+    }
+*/
     function setupCategoryFiltering(products) {
         document.querySelectorAll(".nav-menu a[data-catergory]").forEach(link => {
             link.addEventListener("click", (e) => {

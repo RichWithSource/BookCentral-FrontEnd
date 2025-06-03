@@ -9,15 +9,24 @@
     <header>
         <h1>Shopping Cart</h1>
         <nav>
-            <a href="homePage.html">← Return to Store</a>
+            <ul class="nav-menu2">
+                <a href="homePage.html">← Return to Store</a>
+            </ul>
+            <div class="theme1">
+                <input type="button" id="theme-toggle1">
+                <label for="theme-toggle1" class="toggle-switch1">
+                    <span class="sun1">🔆</span>
+                    <span class="moon1">🌑</span>
+                </label>
+            </div>
         </nav>
     </header>
 
     <main id="cart-container"></main>
 
     <footer>
-        <button onclick="checkout()">Proceed to Checkout</button>
-        <button onclick="clearCart()">Clear Cart</button>
+        <button id="checkoutButton" onclick="checkout()">Proceed to Checkout</button>
+        <button id="clearCartButton" onclick="clearCart()">Clear Cart</button>
     </footer>
 
     <script>
@@ -83,5 +92,7 @@
             window.location.href = "checkoutPage.html";
         }
     </script>
+    
 </body>
+<script src="theme-toggle.js"></script>
 </html>
