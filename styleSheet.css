@@ -200,16 +200,22 @@ button#addCartButton {
     color: var(--texr);
 }
 
+.product-card p {
+    margin: 1em;
+    padding: 1em;
+}
+
 .product-card {
     background-color: var(--card-bg);
     padding: 1em;
     border-radius: 8px;
+    align-items: center;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .product-card img {
-    width: 50%;
-    height: 50%;
+    width: 75%;
+    height: 75%;
     align-items: center;
     object-fit: fill;
     max-height: 100%;
