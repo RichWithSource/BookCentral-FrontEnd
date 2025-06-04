@@ -210,11 +210,11 @@ button#addCartButton {
 .product-card img {
     width: 50%;
     height: 50%;
+    align-items: center;
     object-fit: fill;
     max-height: 100%;
     max-width: 100%;
-    border-radius: 5px;
-    border-color: var(--bg);
+    border-color: 2px solid var(--bg);
 }
 
 .checkout-form {
