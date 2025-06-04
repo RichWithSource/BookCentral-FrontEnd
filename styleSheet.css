@@ -198,11 +198,14 @@ button#addCartButton {
     font-family:'Times New Roman', Times, serif;
     cursor: pointer;
     color: var(--texr);
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .product-card p {
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1em;
+    padding: 1em;
+    justify-content: space-between;
 }
 
 .product-card {
