@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             container.appendChild(card);
         });
     }
+    
     function setupCategoryFiltering(products4) {
         document.querySelectorAll(".nav-menu a[data-catergory]").forEach(link => {
             link.addEventListener("click", (e) => {
